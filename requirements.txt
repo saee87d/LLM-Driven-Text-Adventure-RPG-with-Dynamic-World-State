@@ -1,0 +1,10 @@
+# LLM-Driven Text Adventure RPG Dependencies
+
+# Ollama Python client for LLM integration
+ollama>=0.3.0
+
+# Standard library dependencies (included for completeness)
+# json (built-in)
+# os (built-in)
+# sys (built-in)
+# typing (built-in)

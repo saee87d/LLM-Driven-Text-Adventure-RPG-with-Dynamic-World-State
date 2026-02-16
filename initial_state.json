@@ -1,0 +1,147 @@
+{
+  "player": {
+    "location_id": "rusty_cave",
+    "inventory": [],
+    "health": 100,
+    "gold": 0,
+    "xp": 0,
+    "equipped": []
+  },
+  "locations": {
+    "rusty_cave": {
+      "description": "You find yourself in a damp, musty cave. The walls are covered with orange rust-like formations that glow faintly in the darkness. Water drips steadily from stalactites above, creating small puddles on the uneven stone floor. A narrow passage leads north, and you can feel a slight breeze coming from that direction.",
+      "items_present": [
+        "old_map",
+        "rusty_dagger"
+      ],
+      "npcs_present": [],
+      "exits": {
+        "north": "forest_path"
+      },
+      "object_states": {}
+    },
+    "forest_path": {
+      "description": "You emerge onto a winding forest path. Ancient trees tower above you, their thick canopy filtering the sunlight into dancing patterns on the mossy ground. Birds chirp in the distance, and you can hear the gentle babbling of a stream nearby. The path continues east toward what looks like a village, while the cave entrance lies to the south.",
+      "items_present": [
+        "wooden_stick",
+        "healing_herb"
+      ],
+      "npcs_present": [
+        "mysterious_traveler"
+      ],
+      "exits": {
+        "south": "rusty_cave",
+        "east": "village_square"
+      },
+      "object_states": {}
+    },
+    "village_square": {
+      "description": "The heart of a small village spreads before you. A weathered stone fountain sits in the center of the cobblestone square, surrounded by modest wooden buildings with thatched roofs. Villagers go about their daily business, casting occasional curious glances in your direction. A blacksmith's forge glows red to the north, while the village inn stands invitingly to the east. The forest path lies to the west.",
+      "items_present": [],
+      "npcs_present": [
+        "village_elder",
+        "merchant"
+      ],
+      "exits": {
+        "west": "forest_path",
+        "north": "blacksmith_forge",
+        "east": "village_inn"
+      },
+      "object_states": {}
+    },
+    "blacksmith_forge": {
+      "description": "The intense heat from the forge washes over you as you enter. The air is thick with the smell of hot metal and coal smoke. Weapons and armor in various stages of completion hang on the walls, and the rhythmic clanging of hammer on anvil fills the air. The blacksmith, a burly figure with soot-covered arms, looks up from their work.",
+      "items_present": [
+        "iron_sword"
+      ],
+      "npcs_present": [
+        "blacksmith"
+      ],
+      "exits": {
+        "south": "village_square"
+      },
+      "object_states": {}
+    },
+    "village_inn": {
+      "description": "The warm, inviting atmosphere of the village inn envelops you. The scent of roasted meat and fresh bread mingles with the smell of ale and wood smoke from the fireplace. Patrons sit at rough wooden tables, engaged in quiet conversation. The innkeeper stands behind the bar, polishing mugs with a worn cloth.",
+      "items_present": [],
+      "npcs_present": [
+        "innkeeper",
+        "bard"
+      ],
+      "exits": {
+        "west": "village_square"
+      },
+      "object_states": {}
+    }
+  },
+  "npcs": {
+    "mysterious_traveler": {
+      "name": "Mysterious Traveler",
+      "location_id": "forest_path",
+      "health": 100,
+      "dialogue_tree_id": "traveler_quest",
+      "hostile": false,
+      "alive": true,
+      "talked": false
+    },
+    "village_elder": {
+      "name": "Village Elder",
+      "location_id": "village_square",
+      "health": 50,
+      "dialogue_tree_id": "elder_wisdom",
+      "hostile": false,
+      "alive": true,
+      "talked": false
+    },
+    "merchant": {
+      "name": "Merchant",
+      "location_id": "village_square",
+      "health": 60,
+      "dialogue_tree_id": "merchant_trade",
+      "hostile": false,
+      "alive": true,
+      "talked": false
+    },
+    "blacksmith": {
+      "name": "Blacksmith",
+      "location_id": "blacksmith_forge",
+      "health": 120,
+      "dialogue_tree_id": "blacksmith_craft",
+      "hostile": false,
+      "alive": true,
+      "talked": false
+    },
+    "innkeeper": {
+      "name": "Innkeeper",
+      "location_id": "village_inn",
+      "health": 70,
+      "dialogue_tree_id": "innkeeper_gossip",
+      "hostile": false,
+      "alive": true,
+      "talked": false
+    },
+    "bard": {
+      "name": "Bard",
+      "location_id": "village_inn",
+      "health": 40,
+      "dialogue_tree_id": "bard_songs",
+      "hostile": false,
+      "alive": true,
+      "talked": false
+    }
+  },
+  "quests": {
+    "find_the_ancient_artifact": {
+      "status": "not_started",
+      "objectives": [
+        "Talk to the Mysterious Traveler",
+        "Explore the forest",
+        "Find the hidden temple",
+        "Retrieve the ancient artifact"
+      ],
+      "completed_objectives": []
+    }
+  },
+  "event_history": []
+}
